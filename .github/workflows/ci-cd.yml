@@ -36,7 +36,7 @@ jobs:
             -Dsonar.projectKey=petclinic \
             -Dsonar.projectName='petclinic' \
             -Dsonar.host.url=${SONAR_HOST_URL} \
-            -Dsonar.login=${SONAR_TOKEN}
+            -Dsonar.token=${SONAR_TOKEN}
 
       - name: Archive production jar
         uses: actions/upload-artifact@v4
