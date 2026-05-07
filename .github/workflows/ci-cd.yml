@@ -73,7 +73,7 @@ jobs:
       - name: Ensure Java is installed on EC2
         run: |
           ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} \
-          "java -version || sudo apt update && sudo apt install -y openjdk-17-jre"
+          "if command -v java >/dev/null 2>&1; then java -version; else sudo apt update && sudo apt install -y openjdk-17-jre; fi"
 
       - name: Start Spring PetClinic
         run: |
