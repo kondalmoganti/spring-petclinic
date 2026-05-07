@@ -33,7 +33,7 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: |
           ./mvnw sonar:sonar \
-            -Dsonar.projectKey=kondal-petclinic-cicd \
+            -Dsonar.projectKey=SONAR_TOKEN \
             -Dsonar.projectName='Kondal PetClinic CICD' \
             -Dsonar.host.url=${SONAR_HOST_URL} \
             -Dsonar.login=${SONAR_TOKEN}
